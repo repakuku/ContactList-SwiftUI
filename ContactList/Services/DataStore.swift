@@ -8,6 +8,11 @@
 class DataStore {
     static let shared = DataStore()
     
+    enum Email: String, CaseIterable  {
+        case gmail = "@gmail.com"
+        case icloud = "@icloud.com"
+    }
+    
     let firstNames = [
         "William",
         "Noah",
@@ -25,6 +30,7 @@ class DataStore {
         "Liam",
         "Grace"
     ]
+    
     let secondNames = [
         "Smith",
         "Johnson",
@@ -42,23 +48,7 @@ class DataStore {
         "Wilson",
         "Anderson"
     ]
-    let emails = [
-        "akajdsv@email.com",
-        "bkalsjdh@email.com",
-        "cajdwhfg@email.com",
-        "dasdbgg@email.com",
-        "asasfgnanl@email.com",
-        "sakiiqnn@email.com",
-        "askiokms@email.com",
-        "opoaksmnshfy@email.com",
-        "psjnasyyf@email.com",
-        "askjfsnnsfj@email.com",
-        "kkjsnhjs@email.com",
-        "asfafff@email.com",
-        "appoisj@email.com",
-        "oiooodjv@email.com",
-        "ppoosafjafj@email.com"
-    ]
+    
     let phoneNumbers = [
         "(213)456-3442",
         "(201)763-8876",
@@ -76,6 +66,8 @@ class DataStore {
         "(201)169-3872",
         "(323)378-1837",
     ]
+    
+    let emails = Email.allCases
     
     private init() {}
 }

@@ -34,23 +34,26 @@ struct Person: Identifiable {
         let firstNames = dataStore.firstNames.shuffled()
         let secondNames = dataStore.secondNames.shuffled()
         let phoneNumbers = dataStore.phoneNumbers.shuffled()
-        let emails = dataStore.emails.shuffled()
+        let emails = dataStore.emails
         
         let iterations = min(
             firstNames.count,
             secondNames.count,
-            phoneNumbers.count,
-            emails.count
+            phoneNumbers.count
         )
         
         for index in 0..<iterations {
+            var email = (firstNames[index] + secondNames[index]).lowercased()
+            email += emails.randomElement()?.rawValue ?? ""
+            
             persons.append(
                 Person(
                     id: index,
                     firstName: firstNames[index],
                     secondName: secondNames[index],
                     phoneNumber: phoneNumbers[index],
-                    email: emails[index])
+                    email: email
+                    )
             )
         }
         
