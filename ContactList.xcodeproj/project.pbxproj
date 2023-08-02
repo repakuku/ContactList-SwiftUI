@@ -63,15 +63,11 @@
 		07F81AA72A79BD8400E3BC5C /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				07F81ABA2A79C00C00E3BC5C /* Person.swift */,
-				07F81ABC2A79C0AA00E3BC5C /* DataStore.swift */,
-				07F81AA82A79BD8400E3BC5C /* ContactListApp.swift */,
-				07F81AAA2A79BD8400E3BC5C /* ContentView.swift */,
-				07F81AB62A79BE9900E3BC5C /* ContactsView.swift */,
-				07F81ABE2A79C57C00E3BC5C /* ContactDetailsView.swift */,
-				07F81AC02A79CEB000E3BC5C /* ContactInfoView.swift */,
-				07F81AB82A79BEAB00E3BC5C /* NumbersView.swift */,
-				07F81AAC2A79BD8400E3BC5C /* Assets.xcassets */,
+				07F81AC22A79D06800E3BC5C /* Models */,
+				07F81AC32A79D07A00E3BC5C /* Services */,
+				07F81AC62A79D0BC00E3BC5C /* App */,
+				07F81AC42A79D0A700E3BC5C /* Views */,
+				07F81AC52A79D0B100E3BC5C /* Resources */,
 				07F81AAE2A79BD8400E3BC5C /* Preview Content */,
 			);
 			path = ContactList;
@@ -83,6 +79,50 @@
 				07F81AAF2A79BD8400E3BC5C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		07F81AC22A79D06800E3BC5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07F81ABA2A79C00C00E3BC5C /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07F81AC32A79D07A00E3BC5C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				07F81ABC2A79C0AA00E3BC5C /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		07F81AC42A79D0A700E3BC5C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07F81AAA2A79BD8400E3BC5C /* ContentView.swift */,
+				07F81AB62A79BE9900E3BC5C /* ContactsView.swift */,
+				07F81ABE2A79C57C00E3BC5C /* ContactDetailsView.swift */,
+				07F81AC02A79CEB000E3BC5C /* ContactInfoView.swift */,
+				07F81AB82A79BEAB00E3BC5C /* NumbersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		07F81AC52A79D0B100E3BC5C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07F81AAC2A79BD8400E3BC5C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07F81AC62A79D0BC00E3BC5C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				07F81AA82A79BD8400E3BC5C /* ContactListApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

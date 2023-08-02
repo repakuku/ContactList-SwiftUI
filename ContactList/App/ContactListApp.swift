@@ -15,3 +15,9 @@ struct ContactListApp: App {
         }
     }
 }
+
+struct Previews_ContactListApp_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}

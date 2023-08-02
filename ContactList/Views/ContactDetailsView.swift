@@ -13,22 +13,19 @@ struct ContactDetailsView: View {
     var body: some View {
         NavigationStack {
             List {
-                HStack {
-                    Spacer()
-                    Image(systemName: "person.fill")
-                        .resizable()
+                Image(systemName: SystemImage.person.rawValue)
+                    .resizable()
                     .frame(width: 100, height: 100)
                     .padding()
-                    Spacer()
-                }
+                    .centered()
                 
                 ContactInfoView(
-                    image: ContactImage.phone.rawValue,
+                    image: SystemImage.phone.rawValue,
                     text: person.phoneNumber
                 )
                 
                 ContactInfoView(
-                    image: ContactImage.email.rawValue,
+                    image: SystemImage.email.rawValue,
                     text: person.email
                 )
             }
@@ -41,5 +38,21 @@ struct ContactDetailsView: View {
 struct ContactDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         ContactDetailsView(person: Person(id: 0, firstName: "Name", secondName: "Surname", phoneNumber: "213-321-4785", email: "ahhfgrt@gmail.com"))
+    }
+}
+
+struct CenteredViewModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        HStack {
+            Spacer()
+            content
+            Spacer()
+        }
+    }
+}
+
+extension View {
+    func centered() -> some View {
+        modifier(CenteredViewModifier())
     }
 }

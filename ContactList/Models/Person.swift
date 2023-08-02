@@ -7,7 +7,10 @@
 
 import Foundation
 
-enum ContactImage: String {
+enum SystemImage: String {
+    case contacts = "person.2.fill"
+    case numbers = "phone.fill"
+    case person = "person.fill"
     case phone = "phone"
     case email = "tray"
 }
