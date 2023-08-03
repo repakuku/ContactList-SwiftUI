@@ -16,7 +16,7 @@ enum SystemImage: String {
 }
 
 struct Person: Identifiable {
-    var id: Int
+    let id: Int
     let firstName: String
     let secondName: String
     let phoneNumber: String

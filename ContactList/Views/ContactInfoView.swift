@@ -13,9 +13,7 @@ struct ContactInfoView: View {
 
     var body: some View {
         HStack {
-            Image(systemName: image)
-                .foregroundColor(.blue)
-            Text(text)
+            Label(text, systemImage: image)
                 .underline()
         }
     }

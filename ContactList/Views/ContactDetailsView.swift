@@ -30,14 +30,14 @@ struct ContactDetailsView: View {
                 )
             }
             .listStyle(.automatic)
-            .navigationTitle("\(person.fullName)")
+            .navigationTitle(person.fullName)
         }
     }
 }
 
 struct ContactDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactDetailsView(person: Person(id: 0, firstName: "Name", secondName: "Surname", phoneNumber: "213-321-4785", email: "ahhfgrt@gmail.com"))
+        ContactDetailsView(person: Person.getPersons().randomElement()!)
     }
 }
 
