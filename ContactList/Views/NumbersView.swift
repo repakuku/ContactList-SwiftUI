@@ -14,15 +14,8 @@ struct NumbersView: View {
         NavigationStack {
             List(persons) { person in
                 Section(person.fullName) {
-                    ContactInfoView(
-                        image: SystemImage.phone.rawValue,
-                        text: person.phoneNumber
-                    )
-                    
-                    ContactInfoView(
-                        image: SystemImage.email.rawValue,
-                        text: person.email
-                    )
+                    Label(person.phoneNumber, systemImage: SystemImage.phone.rawValue)
+                    Label(person.email, systemImage: SystemImage.email.rawValue)
                 }
             }
             .listStyle(.plain)

@@ -48,7 +48,7 @@ struct Person: Identifiable {
             
             persons.append(
                 Person(
-                    id: index,
+                    id: index + 1,
                     firstName: firstNames[index],
                     secondName: secondNames[index],
                     phoneNumber: phoneNumbers[index],

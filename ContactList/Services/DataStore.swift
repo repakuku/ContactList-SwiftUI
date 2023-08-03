@@ -5,7 +5,7 @@
 //  Created by Алексей Турулин on 5/27/23.
 //
 
-class DataStore {
+final class DataStore {
     static let shared = DataStore()
     
     enum Email: String, CaseIterable  {

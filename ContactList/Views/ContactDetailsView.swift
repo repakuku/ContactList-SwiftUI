@@ -11,27 +11,18 @@ struct ContactDetailsView: View {
     let person: Person
     
     var body: some View {
-        NavigationStack {
-            List {
-                Image(systemName: SystemImage.person.rawValue)
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .padding()
-                    .centered()
-                
-                ContactInfoView(
-                    image: SystemImage.phone.rawValue,
-                    text: person.phoneNumber
-                )
-                
-                ContactInfoView(
-                    image: SystemImage.email.rawValue,
-                    text: person.email
-                )
-            }
-            .listStyle(.automatic)
-            .navigationTitle(person.fullName)
+        List {
+            Image(systemName: SystemImage.person.rawValue)
+                .resizable()
+                .frame(width: 100, height: 100)
+                .padding()
+                .centered()
+            
+            Label(person.phoneNumber, systemImage: SystemImage.phone.rawValue)
+            Label(person.email, systemImage: SystemImage.email.rawValue)
         }
+        .listStyle(.automatic)
+        .navigationTitle(person.fullName)
     }
 }
 
